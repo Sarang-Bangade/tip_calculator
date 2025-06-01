@@ -14,7 +14,8 @@
     const tipPercentage =  parseFloat(tipPercentageInput.value)
     const numPeople =  parseInt(numPeopleInput.value)
 
+
+
+
     
-
-
  }
