@@ -1,0 +1,138 @@
+/* Import a Google Font and Font Awesome */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8EC5FC 0%, #E0C3FC 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container Card */
+.Container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    transition: transform 0.3s ease;
+}
+
+.Container:hover {
+    transform: scale(1.02);
+}
+
+/* Title */
+.Container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #4e54c8;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Label */
+label {
+    display: block;
+    margin: 1rem 0 0.4rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Input Fields */
+input[type="number"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #4e54c8;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(78, 84, 200, 0.3);
+}
+
+/* Button */
+#calculateTip {
+    margin-top: 1.8rem;
+    padding: 0.9rem 1.8rem;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#calculateTip:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+    transform: translateY(-2px);
+}
+
+/* Result Styling */
+#totalTip,
+#tipPerPerson {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    background-color: #f1f3f5;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+}
+
+/* Icon prefix for better UI (optional) */
+label::before {
+    content: '💵';
+    margin-right: 6px;
+    font-size: 1rem;
+    color: #888;
+}
+
+label[for="tipPercentage"]::before {
+    content: '🎯';
+}
+
+label[for="numPeople"]::before {
+    content: '👥';
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .Container {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+
+    .Container h1 {
+        font-size: 1.6rem;
+    }
+
+    #calculateTip {
+        font-size: 1rem;
+    }
+
+    input[type="number"] {
+        font-size: 0.95rem;
+    }
+}
