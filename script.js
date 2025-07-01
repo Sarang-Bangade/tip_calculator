@@ -15,7 +15,4 @@
     const numPeople =  parseInt(numPeopleInput.value)
 
 
-
-
-
  }
